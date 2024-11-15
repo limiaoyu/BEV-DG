@@ -211,17 +211,17 @@ def train(cfg, output_dir='', run_name=''):
         last_number_s = 0
         last_number_t = 0
         for i in range(img_s.shape[0]):
-            n_src = data_batch_src['img_indices'][i].shape[0]  # 第i个源域点云里点的数量
+            n_src = data_batch_src['img_indices'][i].shape[0]  
             current_number_s = last_number_s + n_src
-            xyz_s = data_batch_src['x'][0][last_number_s:current_number_s, :3]  # 第i个源域点云里点的坐标
+            xyz_s = data_batch_src['x'][0][last_number_s:current_number_s, :3]  
             x_s = torch.max(xyz_s[:, 0]) - torch.min(xyz_s[:, 0])
             y_s = torch.max(xyz_s[:, 1]) - torch.min(xyz_s[:, 1])
             z_s = torch.max(xyz_s[:, 2]) - torch.min(xyz_s[:, 2])
             density_s = (x_s * y_s * z_s) / n_src
 
-            n_trg = data_batch_trg['img_indices'][i].shape[0]  # 第i个目标域点云里点的数量
+            n_trg = data_batch_trg['img_indices'][i].shape[0]  
             current_number_t = last_number_t + n_trg
-            xyz_t = data_batch_trg['x'][0][last_number_t:current_number_t, :3]  # 第i个目标点云里点的坐标
+            xyz_t = data_batch_trg['x'][0][last_number_t:current_number_t, :3]  
             x_t = torch.max(xyz_t[:, 0]) - torch.min(xyz_t[:, 0])
             y_t = torch.max(xyz_t[:, 1]) - torch.min(xyz_t[:, 1])
             z_t = torch.max(xyz_t[:, 2]) - torch.min(xyz_t[:, 2])
