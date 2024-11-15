@@ -69,3 +69,17 @@ by the output directory for that config file. For example:
 $ python xmuda/test.py --cfg=configs/AS_to_N/xmuda.yaml  @/model_2d_065000.pth @/model_3d_095000.pth
 ```
 You can also provide an absolute path without `@`. 
+
+## Citation
+If you find our work useful in your research, please consider citing:
+
+  @inproceedings{li2023bev,
+  title={BEV-DG: Cross-Modal Learning under Bird's-Eye View for Domain Generalization of 3D Semantic Segmentation},
+  author={Li, Miaoyu and Zhang, Yachao and Ma, Xu and Qu, Yanyun and Fu, Yun},
+  booktitle={Proceedings of the IEEE/CVF International Conference on Computer Vision},
+  pages={11632--11642},
+  year={2023}
+  }
+    
+## Acknowledgment
+Note that this code is built based on [xMUDA](https://github.com/valeoai/xmuda).
