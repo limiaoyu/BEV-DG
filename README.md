@@ -1,4 +1,3 @@
-This code is 
 ## Preparation
 ### Prerequisites
 Tested with
