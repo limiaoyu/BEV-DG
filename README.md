@@ -1,5 +1,4 @@
-This code is supplementary material for ICCV 2023 submission paper ID:2542.
-It is only available to reviewers.
+This code is 
 ## Preparation
 ### Prerequisites
 Tested with
